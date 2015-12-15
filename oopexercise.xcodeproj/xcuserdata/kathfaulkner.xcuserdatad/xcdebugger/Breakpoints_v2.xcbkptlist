@@ -2,4 +2,100 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oopexercise/Character.swift"
+            timestampString = "471909549.099234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "Character"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oopexercise.Character.init (oopexercise.Character.Type)(startingHp : Swift.Int, attackPower : Swift.Int, name : Swift.String) -&gt; oopexercise.Character"
+                  moduleName = "oopexercise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kathfaulkner/Dropbox/Other/Projects/Udemy%20Projects/oopexercise/oopexercise/Character.swift"
+                  timestampString = "471898252.342508"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oopexercise.Character.deathSound.getter : __ObjC.AVAudioPlayer"
+                  moduleName = "oopexercise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kathfaulkner/Dropbox/Other/Projects/Udemy%20Projects/oopexercise/oopexercise/Character.swift"
+                  timestampString = "471898252.342803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oopexercise.Character.deathSound.setter : __ObjC.AVAudioPlayer"
+                  moduleName = "oopexercise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kathfaulkner/Dropbox/Other/Projects/Udemy%20Projects/oopexercise/oopexercise/Character.swift"
+                  timestampString = "471898252.343025"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oopexercise.Character.deathSound.materializeForSet : __ObjC.AVAudioPlayer"
+                  moduleName = "oopexercise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kathfaulkner/Dropbox/Other/Projects/Udemy%20Projects/oopexercise/oopexercise/Character.swift"
+                  timestampString = "471898252.34326"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oopexercise/Character.swift"
+            timestampString = "471909549.099234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "init(name:startingHp:attackPower:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

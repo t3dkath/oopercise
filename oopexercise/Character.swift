@@ -7,8 +7,20 @@
 //
 
 import Foundation
+import AVFoundation
 
 class Character {
+    
+    var deathURL: NSURL {
+        return NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("man-death", ofType: "wav")!)
+    }
+    var deathSound = AVAudioPlayer()
+    
+    var attackURL: NSURL {
+        return NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("man-attack", ofType: "wav")!)
+    }
+    var attackSound = AVAudioPlayer()
+    
     
     private var _hp: Int = 100
     var hp: Int {
@@ -38,19 +50,47 @@ class Character {
             return true
         }
     }
-    var isStunned: Bool = false
     
     
-    init(startingHp: Int, attackPower: Int, name: String) {
+    init(name: String, startingHp: Int = 100, attackPower: Int = 20) {
         self._hp = startingHp
         self._attackPower = attackPower
         self._name = name
+        
+        setupSFX()
     }
     
     func onAttemptAttack(attacker: Character) ->Bool {
+        if attackSound.playing {
+            attackSound.stop()
+            attackSound.currentTime = 0
+        }
+        attackSound.play()
+        
         self._hp -= attacker.attackPower
         
         return true
+    }
+    
+    func onDeath() {
+        deathSound.play()
+    }
+    
+    
+    func setupSFX() {
+        do {
+            try deathSound = AVAudioPlayer(contentsOfURL: deathURL)
+            deathSound.prepareToPlay()
+        } catch let deathErr as NSError {
+            print(deathErr.debugDescription)
+        }
+        
+        do {
+            try attackSound = AVAudioPlayer(contentsOfURL: attackURL)
+            attackSound.prepareToPlay()
+        } catch let attackErr as NSError {
+            print(attackErr.debugDescription)
+        }
     }
     
 }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 class Game {
     
@@ -15,7 +14,7 @@ class Game {
     var p2: Character!
     
     init() {
-        p1 = Character(startingHp: 100, attackPower: 20, name: "Player 1")
-        p2 = Character(startingHp: 100, attackPower: 20, name: "Player 2")
+        p1 = Troll(name: "Player 1")
+        p2 = Character(name: "Player 2")
     }
 }

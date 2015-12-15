@@ -10,6 +10,12 @@
 		FB55E1851C1F2DE9008C4633 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55E1841C1F2DE9008C4633 /* Game.swift */; };
 		FBA79CDD1C1EE43A0011B2E9 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBA79CDC1C1EE43A0011B2E9 /* Minecraft.ttf */; };
 		FBA79CDF1C1EF04B0011B2E9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA79CDE1C1EF04B0011B2E9 /* Character.swift */; };
+		FBDEF1911C203819001D56BE /* man-death.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBDEF1901C203819001D56BE /* man-death.wav */; };
+		FBDEF1931C203A59001D56BE /* man-attack.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBDEF1921C203A59001D56BE /* man-attack.wav */; };
+		FBDEF1951C20C30F001D56BE /* Troll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDEF1941C20C30F001D56BE /* Troll.swift */; };
+		FBDEF1991C20C6E2001D56BE /* troll-attack.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBDEF1971C20C6E2001D56BE /* troll-attack.wav */; };
+		FBDEF19A1C20C6E2001D56BE /* troll-death.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBDEF1981C20C6E2001D56BE /* troll-death.wav */; };
+		FBDEF19C1C20C7C5001D56BE /* game-music.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBDEF19B1C20C7C5001D56BE /* game-music.wav */; };
 		FBF0EE931C1EC0F700812404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0EE921C1EC0F700812404 /* AppDelegate.swift */; };
 		FBF0EE951C1EC0F700812404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0EE941C1EC0F700812404 /* ViewController.swift */; };
 		FBF0EE981C1EC0F700812404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF0EE961C1EC0F700812404 /* Main.storyboard */; };
@@ -21,6 +27,12 @@
 		FB55E1841C1F2DE9008C4633 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FBA79CDC1C1EE43A0011B2E9 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		FBA79CDE1C1EF04B0011B2E9 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		FBDEF1901C203819001D56BE /* man-death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "man-death.wav"; path = "../man-death.wav"; sourceTree = "<group>"; };
+		FBDEF1921C203A59001D56BE /* man-attack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "man-attack.wav"; path = "../man-attack.wav"; sourceTree = "<group>"; };
+		FBDEF1941C20C30F001D56BE /* Troll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Troll.swift; sourceTree = "<group>"; };
+		FBDEF1971C20C6E2001D56BE /* troll-attack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "troll-attack.wav"; path = "../troll-attack.wav"; sourceTree = "<group>"; };
+		FBDEF1981C20C6E2001D56BE /* troll-death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "troll-death.wav"; path = "../troll-death.wav"; sourceTree = "<group>"; };
+		FBDEF19B1C20C7C5001D56BE /* game-music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "game-music.wav"; path = "oopexercise/game-music.wav"; sourceTree = "<group>"; };
 		FBF0EE8F1C1EC0F700812404 /* oopexercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oopexercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF0EE921C1EC0F700812404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF0EE941C1EC0F700812404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,9 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FBDEF1961C20C434001D56BE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FBDEF1971C20C6E2001D56BE /* troll-attack.wav */,
+				FBDEF1981C20C6E2001D56BE /* troll-death.wav */,
+				FBDEF1901C203819001D56BE /* man-death.wav */,
+				FBDEF1921C203A59001D56BE /* man-attack.wav */,
+			);
+			name = Sounds;
+			path = oopexercise;
+			sourceTree = "<group>";
+		};
 		FBF0EE861C1EC0F700812404 = {
 			isa = PBXGroup;
 			children = (
+				FBDEF19B1C20C7C5001D56BE /* game-music.wav */,
+				FBDEF1961C20C434001D56BE /* Sounds */,
 				FBF0EE911C1EC0F700812404 /* oopexercise */,
 				FBF0EE901C1EC0F700812404 /* Products */,
 				FBA79CDC1C1EE43A0011B2E9 /* Minecraft.ttf */,
@@ -69,6 +95,7 @@
 				FBF0EE9E1C1EC0F700812404 /* Info.plist */,
 				FBA79CDE1C1EF04B0011B2E9 /* Character.swift */,
 				FB55E1841C1F2DE9008C4633 /* Game.swift */,
+				FBDEF1941C20C30F001D56BE /* Troll.swift */,
 			);
 			path = oopexercise;
 			sourceTree = "<group>";
@@ -131,9 +158,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDEF19C1C20C7C5001D56BE /* game-music.wav in Resources */,
 				FBF0EE9D1C1EC0F700812404 /* LaunchScreen.storyboard in Resources */,
 				FBF0EE9A1C1EC0F700812404 /* Assets.xcassets in Resources */,
 				FBA79CDD1C1EE43A0011B2E9 /* Minecraft.ttf in Resources */,
+				FBDEF19A1C20C6E2001D56BE /* troll-death.wav in Resources */,
+				FBDEF1931C203A59001D56BE /* man-attack.wav in Resources */,
+				FBDEF1911C203819001D56BE /* man-death.wav in Resources */,
+				FBDEF1991C20C6E2001D56BE /* troll-attack.wav in Resources */,
 				FBF0EE981C1EC0F700812404 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +180,7 @@
 				FBA79CDF1C1EF04B0011B2E9 /* Character.swift in Sources */,
 				FBF0EE951C1EC0F700812404 /* ViewController.swift in Sources */,
 				FBF0EE931C1EC0F700812404 /* AppDelegate.swift in Sources */,
+				FBDEF1951C20C30F001D56BE /* Troll.swift in Sources */,
 				FB55E1851C1F2DE9008C4633 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

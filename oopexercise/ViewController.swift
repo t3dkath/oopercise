@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var p1AttackBtn: UIButton!
     @IBOutlet weak var p2AttackBtn: UIButton!
     
+    @IBOutlet weak var selectionTxt: UILabel!
+    
     var game: Game!
     
     var attacker: Character!
@@ -26,12 +29,24 @@ class ViewController: UIViewController {
     var timerFunc: String!
     var stunTimer: NSTimer?
     
+    let gameMusicURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("game-music", ofType: "wav")!)
+    var gameMusic = AVAudioPlayer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         game = Game()
         
+        do {
+            try gameMusic = AVAudioPlayer(contentsOfURL: gameMusicURL)
+            gameMusic.numberOfLoops = -1
+            gameMusic.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+        gameMusic.play()
     }
 
     
@@ -54,16 +69,9 @@ class ViewController: UIViewController {
         defender.onAttemptAttack(attacker)
         
         if !defender.isAlive {
-            textLbl.text = "\(attacker.name) is the winner"
-            textHolderImg.hidden = false
-            textLbl.hidden = false
             
-            restartBtn.hidden = false
-            restartLbl.hidden = false
+            gameOver()
             
-            stunTimer?.invalidate()
-            player1Stunned()
-            player2Stunned()
         } else {
             stunTimer?.invalidate()
             stunTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector(timerFunc), userInfo: nil, repeats: false)
@@ -84,20 +92,25 @@ class ViewController: UIViewController {
         game = Game()
     }
     
-    func player1Stunned() {
-        p1AttackBtn.enabled = false
-    }
-    func player2Stunned() {
-        p2AttackBtn.enabled = false
-    }
-    func player1Enabled() {
-        p1AttackBtn.enabled = true
-    }
-    func player2Enabled() {
-        p2AttackBtn.enabled = true
-    }
+    func player1Stunned() { p1AttackBtn.enabled = false }
+    func player2Stunned() { p2AttackBtn.enabled = false }
+    func player1Enabled() { p1AttackBtn.enabled = true }
+    func player2Enabled() { p2AttackBtn.enabled = true }
     
-    
+    func gameOver() {
+        textLbl.text = "\(attacker.name) is the winner"
+        textHolderImg.hidden = false
+        textLbl.hidden = false
+        
+        restartBtn.hidden = false
+        restartLbl.hidden = false
+        
+        stunTimer?.invalidate()
+        defender.onDeath()
+        
+        player1Stunned()
+        player2Stunned()
+    }
 
 }
 
