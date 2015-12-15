@@ -13,8 +13,19 @@ class Game {
     var p1: Character!
     var p2: Character!
     
+    var startText: String = "Player 1; Choose your hero"
+    var currentPlayer: String = "Player 1"
+    
     init() {
-        p1 = Troll(name: "Player 1")
-        p2 = Character(name: "Player 2")
+        
+    }
+    
+    func characterSelect(hero: Character) {
+        if currentPlayer == "Player 1" {
+            p1 = hero
+            currentPlayer = "Player 2"
+        } else {
+            p2 = hero
+        }
     }
 }
