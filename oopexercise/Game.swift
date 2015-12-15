@@ -23,7 +23,6 @@ class Game {
     func characterSelect(hero: Character) {
         if currentPlayer == "Player 1" {
             p1 = hero
-            currentPlayer = "Player 2"
         } else {
             p2 = hero
         }

@@ -30,28 +30,54 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="bIw-tN-KSW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="534"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNi-2V-ExP" userLabel="humanBtn">
+                                <rect key="frame" x="314" y="298" width="212" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="NLW-zO-EjI"/>
+                                    <constraint firstAttribute="width" constant="212" id="UVg-V9-HdZ"/>
+                                </constraints>
+                                <state key="normal" image="human-r"/>
+                                <connections>
+                                    <action selector="onHumanBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kn3-kG-mNr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLf-3Y-Z9f" userLabel="trollBtn">
+                                <rect key="frame" x="111" y="351" width="122" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="eXf-Qj-e23"/>
+                                    <constraint firstAttribute="height" constant="177" id="fNR-K5-bmt"/>
+                                </constraints>
+                                <state key="normal" image="troll-l"/>
+                                <connections>
+                                    <action selector="onTrollBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BqR-jp-DcF"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="V1D-SO-Wkl">
                                 <rect key="frame" x="0.0" y="529" width="600" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="og0-rp-Xhq"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-4P-TBP">
-                                <rect key="frame" x="45" y="316" width="148" height="215"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sd1-TR-LAj" userLabel="Left Human ImageView">
+                                <rect key="frame" x="40" y="203" width="257" height="373"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="254" id="BBN-ix-72X"/>
-                                    <constraint firstAttribute="height" constant="215" id="EVZ-vr-XEv"/>
-                                    <constraint firstAttribute="width" constant="175" id="GxL-F5-Vhp"/>
-                                    <constraint firstAttribute="width" constant="148" id="KAm-FA-bMo"/>
+                                    <constraint firstAttribute="width" constant="257" id="6UB-q4-9Td"/>
+                                    <constraint firstAttribute="height" constant="373" id="J0Y-S1-TUh"/>
+                                    <constraint firstAttribute="width" constant="148" id="bDd-c4-6lh"/>
+                                    <constraint firstAttribute="height" constant="215" id="psY-6G-P3v"/>
+                                    <constraint firstAttribute="height" constant="254" id="r6z-QR-eTb"/>
+                                    <constraint firstAttribute="width" constant="175" id="yqe-1l-fHt"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="BBN-ix-72X"/>
-                                        <exclude reference="GxL-F5-Vhp"/>
+                                        <exclude reference="bDd-c4-6lh"/>
+                                        <exclude reference="psY-6G-P3v"/>
+                                        <exclude reference="r6z-QR-eTb"/>
+                                        <exclude reference="yqe-1l-fHt"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6h-9e-Yam">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6h-9e-Yam" userLabel="Right Human ImageView">
                                 <rect key="frame" x="303" y="203" width="257" height="373"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="148" id="QBK-oV-gkc"/>
@@ -67,6 +93,21 @@
                                         <exclude reference="Rc4-xb-c8V"/>
                                         <exclude reference="Xve-il-Few"/>
                                         <exclude reference="fq9-lR-RlH"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-4P-TBP" userLabel="Left Troll ImageView">
+                                <rect key="frame" x="45" y="316" width="148" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="254" id="BBN-ix-72X"/>
+                                    <constraint firstAttribute="height" constant="215" id="EVZ-vr-XEv"/>
+                                    <constraint firstAttribute="width" constant="175" id="GxL-F5-Vhp"/>
+                                    <constraint firstAttribute="width" constant="148" id="KAm-FA-bMo"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BBN-ix-72X"/>
+                                        <exclude reference="GxL-F5-Vhp"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -121,17 +162,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNi-2V-ExP" userLabel="humanBtn">
-                                <rect key="frame" x="314" y="298" width="212" height="230"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="NLW-zO-EjI"/>
-                                    <constraint firstAttribute="width" constant="212" id="UVg-V9-HdZ"/>
-                                </constraints>
-                                <state key="normal" image="human"/>
-                                <connections>
-                                    <action selector="onHumanBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kn3-kG-mNr"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1 choose your hero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRv-gB-T3N" userLabel="selectionTxt">
                                 <rect key="frame" x="81" y="34" width="439" height="42"/>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="26"/>
@@ -150,22 +180,27 @@
                                 <color key="textColor" red="0.0078431372550000003" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLf-3Y-Z9f" userLabel="trollBtn">
-                                <rect key="frame" x="111" y="351" width="122" height="177"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1v-25-dcd" userLabel="Right Troll ImageView">
+                                <rect key="frame" x="414" y="316" width="148" height="215"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="eXf-Qj-e23"/>
-                                    <constraint firstAttribute="height" constant="177" id="fNR-K5-bmt"/>
+                                    <constraint firstAttribute="width" constant="175" id="FIk-cI-xE1"/>
+                                    <constraint firstAttribute="height" constant="254" id="jc7-yy-TOn"/>
+                                    <constraint firstAttribute="width" constant="148" id="rDB-4N-Atw"/>
+                                    <constraint firstAttribute="height" constant="215" id="wXS-Jj-gIc"/>
                                 </constraints>
-                                <state key="normal" image="troll"/>
-                                <connections>
-                                    <action selector="onTrollBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BqR-jp-DcF"/>
-                                </connections>
-                            </button>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jc7-yy-TOn"/>
+                                        <exclude reference="FIk-cI-xE1"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LhG-e9-y8H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="0dJ-BQ-WkU"/>
                             <constraint firstItem="TSs-le-ibj" firstAttribute="centerY" secondItem="LhG-e9-y8H" secondAttribute="centerY" id="5pO-Ql-3F4"/>
+                            <constraint firstItem="sd1-TR-LAj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="7fv-Km-ZOy"/>
                             <constraint firstItem="QeB-vr-hIW" firstAttribute="centerX" secondItem="VkX-Yp-RB9" secondAttribute="centerX" id="8gC-0k-Ojs"/>
                             <constraint firstItem="VkX-Yp-RB9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Lv-bV-qaG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bIw-tN-KSW" secondAttribute="bottom" id="9yO-04-jAi"/>
@@ -173,6 +208,7 @@
                             <constraint firstItem="rRv-gB-T3N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BC5-3a-1zy"/>
                             <constraint firstItem="p9e-Cb-6mz" firstAttribute="centerX" secondItem="HSF-fJ-0qv" secondAttribute="centerX" id="CQT-Z3-8BV"/>
                             <constraint firstAttribute="trailing" secondItem="V1D-SO-Wkl" secondAttribute="trailing" id="CTv-8b-fbu"/>
+                            <constraint firstItem="HSF-fJ-0qv" firstAttribute="top" secondItem="O1v-25-dcd" secondAttribute="bottom" constant="8" id="DGR-g7-pJW"/>
                             <constraint firstItem="HSF-fJ-0qv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GZS-I5-Mwz"/>
                             <constraint firstItem="bIw-tN-KSW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hwp-uX-gxl"/>
                             <constraint firstItem="pKv-Gs-LdE" firstAttribute="centerY" secondItem="TSs-le-ibj" secondAttribute="centerY" id="Hzs-pO-9ny"/>
@@ -191,6 +227,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="I6h-9e-Yam" secondAttribute="trailing" constant="20" id="V3i-3b-oEL"/>
                             <constraint firstItem="DNi-2V-ExP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="YBt-8F-pdd"/>
                             <constraint firstItem="V1D-SO-Wkl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YIH-h5-UXh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sd1-TR-LAj" secondAttribute="bottom" constant="24" id="ZAh-DX-kFO"/>
                             <constraint firstItem="V1D-SO-Wkl" firstAttribute="top" secondItem="bIw-tN-KSW" secondAttribute="bottom" constant="-5" id="ZwE-U1-bVO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HSF-fJ-0qv" secondAttribute="bottom" constant="8" id="bGS-wl-eeW"/>
                             <constraint firstItem="0Zw-Re-GJb" firstAttribute="centerY" secondItem="LhG-e9-y8H" secondAttribute="centerY" id="c8f-qd-wGh"/>
@@ -204,6 +241,7 @@
                             <constraint firstItem="V1D-SO-Wkl" firstAttribute="top" secondItem="gLf-3Y-Z9f" secondAttribute="bottom" id="lj2-ln-oXk"/>
                             <constraint firstItem="pKv-Gs-LdE" firstAttribute="centerX" secondItem="TSs-le-ibj" secondAttribute="centerX" id="p5A-Ul-C2k"/>
                             <constraint firstItem="gLf-3Y-Z9f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="pl1-KT-Rc5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O1v-25-dcd" secondAttribute="trailing" constant="25" id="qBk-RO-PHI"/>
                             <constraint firstItem="PeG-4P-TBP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="vvw-Wh-bQu"/>
                             <constraint firstAttribute="trailing" secondItem="bIw-tN-KSW" secondAttribute="trailing" id="zoc-Se-UN2"/>
                         </constraints>
@@ -221,20 +259,37 @@
                     </view>
                     <connections>
                         <outlet property="humanBtn" destination="DNi-2V-ExP" id="6VO-NU-hwI"/>
-                        <outlet property="leftCharacter" destination="PeG-4P-TBP" id="tjQ-Vw-AeM"/>
+                        <outlet property="leftHumanImageView" destination="sd1-TR-LAj" id="UIC-LR-9TI"/>
+                        <outlet property="leftTrollImageView" destination="PeG-4P-TBP" id="Qvf-w8-XG9"/>
                         <outlet property="p1AttackBtn" destination="LhG-e9-y8H" id="3kv-eE-JX8"/>
                         <outlet property="p1AttackLbl" destination="0Zw-Re-GJb" id="fj3-p6-a76"/>
                         <outlet property="p2AttackBtn" destination="TSs-le-ibj" id="3OE-hg-mBp"/>
                         <outlet property="p2AttackLbl" destination="pKv-Gs-LdE" id="2JW-GD-LjO"/>
                         <outlet property="restartBtn" destination="VkX-Yp-RB9" id="3fZ-AK-ZZD"/>
                         <outlet property="restartLbl" destination="QeB-vr-hIW" id="913-2V-85G"/>
-                        <outlet property="rightCharacter" destination="I6h-9e-Yam" id="UG2-6k-8Mq"/>
+                        <outlet property="rightHumanImageView" destination="I6h-9e-Yam" id="aJq-KJ-0OK"/>
+                        <outlet property="rightTrollImageView" destination="O1v-25-dcd" id="SZ6-oZ-GNT"/>
                         <outlet property="selectionTxt" destination="rRv-gB-T3N" id="Fhb-CW-3xl"/>
                         <outlet property="textHolderImg" destination="HSF-fJ-0qv" id="tad-Ml-54W"/>
                         <outlet property="textLbl" destination="p9e-Cb-6mz" id="WQJ-q8-8el"/>
                         <outlet property="trollBtn" destination="gLf-3Y-Z9f" id="jDe-PS-dWg"/>
                     </connections>
                 </viewController>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p7H-hQ-2fX" userLabel="Left Troll ImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="148" height="215"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="4zB-2P-hTJ"/>
+                        <constraint firstAttribute="height" constant="254" id="CvI-9g-fzF"/>
+                        <constraint firstAttribute="width" constant="148" id="XaV-oj-XBt"/>
+                        <constraint firstAttribute="height" constant="215" id="cKH-L4-Fj2"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="CvI-9g-fzF"/>
+                            <exclude reference="4zB-2P-hTJ"/>
+                        </mask>
+                    </variation>
+                </imageView>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="337"/>
@@ -243,10 +298,10 @@
     <resources>
         <image name="bg" width="1024" height="677"/>
         <image name="ground" width="1024" height="106"/>
-        <image name="human" width="406" height="441"/>
+        <image name="human-r" width="406" height="441"/>
         <image name="player1attackbtn" width="212" height="78"/>
         <image name="player2attackbtn" width="212" height="78"/>
         <image name="text-holder" width="696" height="106"/>
-        <image name="troll" width="241" height="348"/>
+        <image name="troll-l" width="241" height="348"/>
     </resources>
 </document>

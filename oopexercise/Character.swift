@@ -11,6 +11,10 @@ import AVFoundation
 
 class Character {
     
+    var size: [Int] {
+        return [212, 230]
+    }
+    
     var deathURL: NSURL {
         return NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("man-death", ofType: "wav")!)
     }

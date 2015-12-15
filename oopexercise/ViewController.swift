@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var restartLbl: UILabel!
     @IBOutlet weak var restartBtn: UIButton!
     
-    @IBOutlet weak var leftCharacter: UIImageView!
-    @IBOutlet weak var rightCharacter: UIImageView!
+    @IBOutlet weak var leftTrollImageView: UIImageView!
+    @IBOutlet weak var leftHumanImageView: UIImageView!
+    @IBOutlet weak var rightHumanImageView: UIImageView!
+    @IBOutlet weak var rightTrollImageView: UIImageView!
     
     @IBOutlet weak var p1AttackBtn: UIButton!
     @IBOutlet weak var p1AttackLbl: UILabel!
@@ -98,14 +100,25 @@ class ViewController: UIViewController {
     }
     
     func characterSelect(character: Character, characterImage: String) {
+        
+        game.characterSelect(character)
+        
         if game.currentPlayer == "Player 1" {
-            leftCharacter.image = UIImage(named: characterImage)
+            if characterImage == "troll" {
+                leftTrollImageView.image = UIImage(named: "\(characterImage)-l")
+            } else {
+                leftHumanImageView.image = UIImage(named: "\(characterImage)-l")
+            }
             selectionTxt.text = "Player 2; Choose your hero"
+            game.currentPlayer = "Player 2"
         } else {
-            rightCharacter.image = UIImage(named: characterImage)
+            if characterImage == "troll" {
+                rightTrollImageView.image = UIImage(named: "\(characterImage)-r")
+            } else {
+                rightHumanImageView.image = UIImage(named: "\(characterImage)-r")
+            }
             startGame()
         }
-        game.characterSelect(character)
     }
     
     
@@ -118,8 +131,14 @@ class ViewController: UIViewController {
         game = Game()
         selectionTxt.text = game.startText
         
-        leftCharacter.hidden = true
-        rightCharacter.hidden = true
+        leftHumanImageView.hidden = true
+        leftTrollImageView.hidden = true
+        rightHumanImageView.hidden = true
+        rightTrollImageView.hidden = true
+        leftHumanImageView.image = UIImage()
+        leftTrollImageView.image = UIImage()
+        rightHumanImageView.image = UIImage()
+        rightTrollImageView.image = UIImage()
         
         p1AttackBtn.hidden = true
         p1AttackLbl.hidden = true
@@ -142,8 +161,10 @@ class ViewController: UIViewController {
     }
     
     func startGame() {
-        leftCharacter.hidden = false
-        rightCharacter.hidden = false
+        leftHumanImageView.hidden = false
+        leftTrollImageView.hidden = false
+        rightHumanImageView.hidden = false
+        rightTrollImageView.hidden = false
         
         p1AttackBtn.hidden = false
         p1AttackLbl.hidden = false
